@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.mobile-container {
+		@apply w-full max-w-mobile mx-auto min-h-screen bg-white;
+	}
+
+	.mobile-container-card {
+		@apply mobile-container shadow-2xl rounded-xl overflow-hidden;
+	}
+}
