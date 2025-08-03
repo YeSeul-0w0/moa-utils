@@ -1,15 +1,15 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
-interface AppLayoutProps {
-	children: React.ReactNode;
-}
-
-const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
+const AppLayout = () => {
 	return (
-		<div className="min-h-screen bg-gray-100 flex justify-center items-start mobile:items-center mobile:p-5">
-			<div className="w-full max-w-[393px] mx-auto min-h-screen bg-white mobile:shadow-2xl mobile:rounded-xl mobile:overflow-hidden mobile:min-h-[calc(100vh-2.5rem)]">
-				{children}
+		<div className="min-h-screen flex flex-col max-w-[430px] mx-auto border border-gray-300">
+			<div className="flex-1">
+				<Outlet />
 			</div>
+			<footer className="h-12 text-center text-gray-400 border-t text-sm py-3">
+				made by ...
+			</footer>
 		</div>
 	);
 };
